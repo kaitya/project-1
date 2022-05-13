@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-logo">
+                <img src="img/icons/header-logo.svg" class="header-logo-img">
+                <span class="header-logo-text">Производство и продажа <br />металлопроката </span>
+            </div>
+            <div class="header-btn">
+                <button class="btn btn-blue">У вас уже есть поставщик?</button>
+            </div>
+            <div class="header-phone">
+                <a href="tel:+7(495)4444444" class="header-phone-number">+7 (495) 444-44-44</a>
+                <a href="#" class="header-phone-text"><img src="img/icons/mobile.svg" alt=""><span>Заказать обратный звонок</span></a>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="main-text">
+                <h1 class="heading">Металлопрокат в наличии в <br /> Новосибирске от производителя <br /> с доставкой до вас за 1-2 дня <br /> по цене ниже рыночной</h1>
+                <span class="sub-heading">Склады и филиалы производства в 26 <br /> крупных городах по всей территории РФ</span>
+                <button class="btn btn-blue">Получить прайс <br /> с персональными ценами</button>
+            </div>
+
+            <div class="main-offer">
+                <div class="main-offer-content">
+                    <img src="img/icons/folder.svg" alt="icon-folder" class="main-offer-img">
+                    <span class="main-offer-text"><span>Получите прайс <br /> с персональной ценой</span></span>
+                </div>
+            </div>
+        </div>
+        <img src="img/bg-main.png" alt="bg_main" class="main-offer-bg">
+    </section>
+    <section class="products">
+        <div class="container">
+            <div class="products-text">
+                <span class="heading-lg">Выгодные цены на <br /> металлопрокат в Новосибирске</span>
+                <span class="sub-heading">Обратитесь к менеджеру и он отправит вам цены на нужные позиции</span>
+            </div>
+            <div class="products-tabs">
+                <span class="products-tabs-text">Посмотрите какие товарные группы есть в наличии в Новосибирске</span>
+                <div class="products-tabs-wrapper">
+                    <div class="tab-items">
+                        <div class="tab-links">
+                            <div class="tablink" onclick="openTab(event, 'tab1')" id="defaultOpen">
+                                <div class="tab-inner">
+                                    <img src="img/icons/tab1-icon.svg" alt="" class="tablink-icon">
+                                    <span class="tablink-text">Штрипс, лента оцинкованная</span>
+                                </div>
+                            </div>
+                            <div class="tablink" onclick="openTab(event, 'tab2')">
+                                <div class="tab-inner">
+                                    <img src="img/icons/tab2-icon.svg" alt="" class="tablink-icon">
+                                    <span class="tablink-text">Сетка</span>
+                                </div>
+                            </div>
+                            <div class="tablink" onclick="openTab(event, 'tab3')">
+                                <div class="tab-inner">
+                                    <img src="img/icons/tab3-icon.svg" alt="" class="tablink-icon">
+                                    <span class="tablink-text">Профиль оцинкованный</span>
+                                </div>
+                            </div>
+                            <div class="tablink" onclick="openTab(event, 'tab4')">
+                                <div class="tab-inner">
+                                    <img src="img/icons/tab4-icon.svg" alt="" class="tablink-icon">
+                                    <span class="tablink-text">Профнастил</span>
+                                </div>
+                            </div>
+                            <div class="tablink" onclick="openTab(event, 'tab5')">
+                                <div class="tab-inner">
+                                    <img src="img/icons/tab5-icon.svg" alt="" class="tablink-icon">
+                                    <span class="tablink-text">Черный металлопрокат</span>
+                                </div>
+                            </div>
+                            <div class="tablink" onclick="openTab(event, 'tab6')">
+                                <div class="tab-inner">
+                                    <img src="img/icons/tab6-icon.svg" alt="" class="tablink-icon">
+                                    <span class="tablink-text">Изделия на заказ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-contents">
+                            <div id="tab1" class="tabcontent">
+                               <div class="tabcontent-inner">
+                                <div class="tab-contents-img">
+                                    <img src="img/tab-img.png" alt="">
+                                </div>
+                                <div class="tab-contents-info">
+                                    <span class="tab-contents-text">Штрипс, лента оцинкованная</span>
+                                    <ul class="tab-list">
+                                        <li class="tab-list-item">Оцинкованный штрипс</li>
+                                        <li class="tab-list-item">Оцинкованная стальная лента</li>
+                                        <li class="tab-list-item">Оцинкованная полоса Г/К</li>
+                                    </ul>
+                                    <button class="btn btn-blue">Узнать стоимость</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead">
+        <div class="container">
+          <div class="lead-inner">
+           <div class="lead-wrap">
+            <span class="heading-lg white">Получите полный каталог <br/> и прайс на металлопрокат</span>
+            <form action="" class="form lead-form">
+               <div class="form-inner">
+                <div class="form-item">
+                    <label for="" class="form-label">Куда отправить прайс и каталог?</label>
+                    <input type="text" placeholder="E-mail" class="form-input">
+                </div>
+                <div class="form-item">
+                    <label for="" class="form-label">Какую компанию вы представляете?</label>
+                    <select name="" id="" class="form-select form-input">
+                        <option value="1">Торговая компания, магазин</option>
+                    </select>
+                </div>
+                
+                </div>
+                <div class="form-inner">
+                <div class="form-item">
+                    <label for="" class="form-label">Как к вам обращаться?</label>
+                    <input type="text" placeholder="Ваше имя" class="form-input">
+                </div>
+                <div class="form-item">
+                    <label for="" class="form-label">Введите телефон</label>
+                    <input type="text" placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" class="form-input">
+                </div>
+                </div>
+                <span class="form-info">Перезвоним, чтобы обсудить условия поставки</span>
+                <button class="btn form-btn btn-blue">Узнать стоимость</button>
+                <span class="form-warning">Нажимая на кнопку, вы даете согласие на обработку <br/> своих персональных данных и соглашаетесь с <br/>Политикой конфиденциальности</span>
+            </form>
+        </div>
+        </div>
+        
+            <div class="lead-img">
+            <img src="img/man-1.png" alt="man">
+        </div>
+        </div>
+        
+    </section>
+
+    <section class="store">
+        <div class="container">
+            <span class="store-heading heading-lg">Поддерживаем остатки на наших складах</span>
+            <span class="sub-heading">благодаря тщательно спланированному объему производства и сбыта</span>
+            <div class="store-content">
+                <div class="store-items">
+                    <div class="store-item">
+                        <div class="store-item-img">
+                            <img src="img/store-item1.png" alt=""></div>
+                            <span class="store-item-text"><b>Штрипс, полоса </b><br /> более 1 000 тонн</span>
+                        
+                    </div>
+                    <div class="store-item">
+                        <div class="store-item-img">
+                            <img src="img/store-item2.png" alt="">
+                        </div>
+                            <span class="store-item-text"><b>Профиль</b><br /> более 200 тонн</span>
+                    </div>
+                    <div class="store-item">
+                        
+                        <div class="store-item-img">
+                            <img src="img/store-item3.png" alt="">
+                        </div>
+                            <span class="store-item-text"><b>Сетка</b><br /> более 300 тонн</span>
+                    </div>
+                    <div class="store-item">
+                        
+                        <div class="store-item-img">
+                            <img src="img/store-item4.png" alt=""></div>
+                            <span class="store-item-text"><b>Профлист</b><br /> более 300 тонн </span>
+                    </div>
+                </div>
+                <div class="store-img">
+                    <img src="img/store-img.png" alt="">
+                    <div class="store-img-info">
+                        <p class="store-img-text">Мы специально поддерживаем не снижаемые остатки, чтобы производить отгрузку за 1-2 дня после оплаты</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer">
+        <div class="container">
+            <div class="offer-wrapper">
+                <div class="offer-text">
+                    <p>Мы продумали всё, чтобы вы могли <br /> купить металлопрокат по выгодной цене <br /> и с доставкой за 2-3 дня</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="logistics">
+       
+   </section>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablink;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
