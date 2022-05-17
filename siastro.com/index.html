@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiAstro.com</title>
+    <link rel="icon" type="image/x-icon" href="">
+
+    <!-- Стили проекта -->
+    <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="header-logo">SiAstro.com</a>
+        </div>
+    </header>
+    <div class="main">
+        <div class="container">
+            <h1 class="heading">Совместимость по дате и месту рождения со <br /> своим настоящим, прошлым и будущим <br /> партнером</h1>
+            <p class="paragraph">Коэффициент не показывает личностные качества человека, он дает оценку Ваших шансов быть вместе. <br /> Программа не учитывает воспитание, окружение, факторы наследственности. И, прежде всего, в делах <br /> сердечных прислушивайтесь к своей интуиции, тогда у Вас все получится!</p>
+        </div>
+    </div>
+    <div class="compatible">
+        <div class="container">
+            <h2 class="sub-heading">Расчет коэффициентов совместимости</h2>
+            <div class="compatible-data-wrap">
+                <div class="compatible-data purple">
+                    <span class="compatible-title">Ваши данные</span>
+                    <form action="#" method="#" class="compatible-form">
+                        <div class="compatible-gender">
+                            <div class="gender-toggle active man">
+                                <span>Мужчина</span>
+                            </div>
+                            <div class="gender-toggle woman">
+                                <span>Женщина</span>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <span class="form-item-title">Дата рождения</span>
+                            <div class="form-item-data">
+                                <div class="select-wrap short">
+                                    <select name="birth-day" id="birth-day" class="form-item-select">
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                    </select>
+                                </div>
+                                <div class="select-wrap">
+                                    <select name="birth-month" id="birth-month" class="form-item-select">
+                                        <option value="1">Января</option>
+                                        <option value="2">Февраля</option>
+                                        <option value="3">Марта</option>
+                                    </select>
+                                </div>
+                                <div class="select-wrap short">
+                                    <select name="birth-year" id="birth-year" class="form-item-select">
+                                        <option value="1988">1988</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1990">1990</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <span class="form-item-title">Время рождения</span>
+                            <div class="form-item-data">
+                                <div class="select-wrap short">
+                                    <select name="birth-hour" id="birth-hour" class="form-item-select">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                    </select>
+                                </div>
+                                <div class="select-wrap short">
+                                    <select name="birth-minute" id="birth-minute" class="form-item-select">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                    </select>
+                                </div>
+                                <div class="form-item-checkbox">
+                                    <label class="form-checkbox">Неизвестно
+                                        <input type="checkbox" class="form-checkbox-input">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item full-width">
+                            <span class="form-item-title">Место рождения</span>
+                            <div class="form-item-data">
+                                <div class="select-city">
+                                    <div class="input-wrap">
+                                        <input type="text" value="Москва" name="city" class="form-item-input input-select-city">
+                                        <div class="select-city-wrap">
+                                            <ul class="city-list">
+                                                <li class="city-list-item active">Москва</li>
+                                                <li class="city-list-item">Московский</li>
+                                                <li class="city-list-item">Новая Москва, Красногорский р-н, Брянская область</li>
+                                                <li class="city-list-item">Менеуз-Москва, Бижбулякский р-н, Респ. Башкортостан</li>
+                                                <li class="city-list-item">Московский</li>
+                                                <li class="city-list-item">Новая Москва, Красногорский р-н, Брянская область</li>
+                                                <li class="city-list-item">Менеуз-Москва, Бижбулякский р-н, Респ. Башкортостан</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item full-width">
+                            <span class="form-item-title">Ваше имя</span>
+                            <div class="form-item-data">
+                                <div class="input-wrap">
+                                    <input type="text" value="Иван" name="name" class="form-item-input" placeholder="Ваше имя">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-reset" type="reset">Сбросить</button>
+                    </form>
+                </div>
+                <div class="compatible-data pink">
+                    <span class="compatible-title">Ваши данные</span>
+                    <form action="#" method="#" class="compatible-form">
+                        <div class="compatible-gender">
+                            <div class="gender-toggle man">
+                                <span>Мужчина</span>
+                            </div>
+                            <div class="gender-toggle active woman">
+                                <span>Женщина</span>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <span class="form-item-title">Дата рождения</span>
+                            <div class="form-item-data">
+                                <div class="select-wrap short">
+                                    <select name="birth-day" id="birth-day" class="form-item-select">
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                    </select>
+                                </div>
+                                <div class="select-wrap">
+                                    <select name="birth-month" id="birth-month" class="form-item-select">
+                                        <option value="1">Января</option>
+                                        <option value="2">Февраля</option>
+                                        <option value="3">Марта</option>
+                                    </select>
+                                </div>
+                                <div class="select-wrap short">
+                                    <select name="birth-year" id="birth-year" class="form-item-select">
+                                        <option value="1988">1988</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1990">1990</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <span class="form-item-title">Время рождения</span>
+                            <div class="form-item-data">
+                                <div class="select-wrap short">
+                                    <select name="birth-hour" id="birth-hour" class="form-item-select">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                    </select>
+                                </div>
+                                <div class="select-wrap short">
+                                    <select name="birth-minute" id="birth-minute" class="form-item-select">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                    </select>
+                                </div>
+                                <div class="form-item-checkbox">
+                                    <label class="form-checkbox">Неизвестно
+                                        <input type="checkbox" class="form-checkbox-input">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item full-width">
+                            <span class="form-item-title">Место рождения</span>
+                            <div class="form-item-data">
+                                <div class="select-city">
+                                    <div class="input-wrap">
+                                        <input type="text" value="Москва" name="city" class="form-item-input input-select-city">
+                                        <div class="select-city-wrap">
+                                            <ul class="city-list">
+                                                <li class="city-list-item active">Москва</li>
+                                                <li class="city-list-item">Московский</li>
+                                                <li class="city-list-item">Новая Москва, Красногорский р-н, Брянская область</li>
+                                                <li class="city-list-item">Менеуз-Москва, Бижбулякский р-н, Респ. Башкортостан</li>
+                                                <li class="city-list-item">Московский</li>
+                                                <li class="city-list-item">Новая Москва, Красногорский р-н, Брянская область</li>
+                                                <li class="city-list-item">Менеуз-Москва, Бижбулякский р-н, Респ. Башкортостан</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item full-width">
+                            <span class="form-item-title">Ваше имя</span>
+                            <div class="form-item-data">
+                                <div class="input-wrap">
+                                    <input type="text" value="" name="name" class="form-item-input" placeholder="Ваше имя">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-reset" type="reset">Сбросить</button>
+                    </form>
+                </div>
+            </div>
+            <div class="compatible-btn">
+                <button class="btn btn-gradient"><span class="btn-gradient-text">Рассчитать</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="service-info">
+        <div class="container">
+
+            <span class="service-info-title">Проверить совместимость между мужчиной и женщиной по дате рождения, имени и знаку зодиака</span>
+
+            <p class="service-info-text">В наши дни очень важно правильно выбрать спутника жизни, не ошибиться, не потерять драгоценное время на «притирки» и узнавания друг друга. Самый простой и быстрый способ понять ваш ли человек перед вами – это просчитать совместимость с ним по дате и месту рождения, а также вашим именам. Чем выше коэффициент совместимости, чем больше шансов у пары прожить долгую и счастливую совместную жизнь.
+                На нашем сайте вы можете проверить совместимость по дате рождения между мужчиной и женщиной в любви и браке.
+                Что это за коэффициент и как его узнать? Отвечаем.</p>
+
+            <span class="service-info-subtitle">Что такое совместимость по дате рождения и почему она так важна?</span>
+
+            <p class="service-info-text">Для достижения гармоничных отношений в паре в первую очередь необходима вовсе не любовь, а астральная совместимость. Идеальный вариант, когда люди являются астральными близнецами – то есть по мнению планет и чисел, управляющих нашими судьбами, такие люди наилучшим образом подходят друг другу, как пазлы дополняя и улучшая качества партнера на протяжении всей совместной жизни. Согласно астрологии, такая совместимость определяется в первую очередь датой рождения партнеров.</p>
+
+            <span class="service-info-subtitle">Как составить гороскоп совместимости по дате рождения?</span>
+
+            <p class="service-info-text">Чтобы составить индивидуальный гороскоп для каждой пары, обычно астрологам требуется много времени на изучение различных нюансов, исходя из зодиакального круга, года, времени и места рождения, имени человека. Процесс этот трудоемкий и не быстрый. Но что делать, если ответ хочется знать уже сегодня? Воспользоваться автоматической системой расчета совместимости! Автоматизация процесса расчета помогает сэкономить время и не платить специалистам – достаточно просто ввести свои данные и данные партнера в поля формы, чтобы через секунду уже знать, совместимы вы или нет. Кроме того, совместимость бывает разная, и об этом поговорим ниже.
+                Варианты совместимости</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-text">&copy; Copyright Astrogate. 2022</span>
+            <a href="#" class="footer-link">Политика конфиденциальности</a>
+        </div>
+    </footer>
+    <!-- Скрипты проекта -->
+    <script src="js/app.min.js"></script>
+
+</body>
+
+</html>
