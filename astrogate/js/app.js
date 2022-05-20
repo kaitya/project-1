@@ -11,7 +11,7 @@ $(document).ready(function () {
     });
 
     $('#show-main-description').on("click", function () {
-        $('#main-description').toggle('slow');
+        $('#main-description').toggle();
         $(this).text(function(i, text){
           return text === "Читать подробнее" ? "Скрыть" : "Читать подробнее";
       })
@@ -66,64 +66,40 @@ $(document).ready(function () {
     $('.popup-close').on("click", function () {
         $('.popup').hide();
     });
+    
+    /* Calendar */
+    
+    $('.select-birth-date').focus(function() {
+        $(this).next().show();
+    });
+    $('.select-birth-date').focusout(function() {
+        $(this).next().hide();
+    });
+    $('.close-calendar').on("click", function () {
+        $('.calendar').hide();
+    });
 });
 
-/* Слайдер страницы */
+/* Слайдеры */
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = [1,1];
+/* Class the members of each slideshow group with different CSS classes */
+let slideId = ["popup_slider", "page_slider"]
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
 }
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slider-page");
-
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-}
-
-/* Слайдер popup 
-
-let slideIndex = 1;
-    displaySlides(slideIndex);
-
-function changeSlides(n) {
-    displaySlides(slideIndex += n);
-}
-
-function thisSlide(n) {
-    displaySlides(slideIndex = n);
-}
-
-function displaySlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slider-popup");
-
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-}*/
