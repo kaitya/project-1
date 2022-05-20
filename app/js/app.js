@@ -14,7 +14,7 @@ $(document).ready(function () {
         $('#main-description').toggle();
         $(this).text(function(i, text){
           return text === "Читать подробнее" ? "Скрыть" : "Читать подробнее";
-      })
+      });
     });
     /* Открытие выпадающего списка */
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 
     /* Табы */
-
+    if(window.matchMedia('(min-width: 768px)').matches){
     $(function () {
         $(".tabs-btn-wrap").on("click", ".tabs-btn:not(.active)", function () {
             $(this)
@@ -42,7 +42,7 @@ $(document).ready(function () {
                 .addClass("active");
         });
     });
-
+    }
     /* Checkbox */
     
     $(function () {
@@ -66,6 +66,9 @@ $(document).ready(function () {
     $('.popup-close').on("click", function () {
         $('.popup').hide();
     });
+    $('.popup-open').on("click", function () {
+        $('.popup, .popup-wrap').show();
+    });
     
     
     /* Кнопка пройти тест */
@@ -85,7 +88,31 @@ $(document).ready(function () {
     $('.close-calendar').on("click", function () {
         $('.calendar').hide();
     });
+    
+    if(window.matchMedia('(max-width: 768px)').matches){
+        $(".tabs-btn").on("click", function () {
+            
+            if ($(this).hasClass('active')){
+                $(this).removeClass('active');
+                $(this).parent().removeClass('active');
+            }
+            else{
+                $(".tabs-btn, .tabs-content").removeClass('active');     
+                $(this).toggleClass('active');
+                $(this).parent().toggleClass('active');
+            }
+        });
+        /*$(".chart-levels-items .btn-recommend").text('Подробнее');*/
+         $(".chart-levels-items .btn-show-details").on("click", function () {
+             $(this).siblings('.level-info-text').toggle();
+             $(this).toggle();
+             $(this).siblings('.btn-recommend').toggle();
+             /*$(this).text(function(i, text){
+          return text === "Подробнее" ? "Скрыть" : "Подробнее";*/
+        });
+    }
 });
+
 
 /* Слайдеры */
 
