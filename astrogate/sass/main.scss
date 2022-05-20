@@ -1244,7 +1244,7 @@ select::-ms-expand {
     width: 100%;
     height: 100%;
     display: none;
-    
+
     &-wrap {
         background: #28203E;
         border-radius: 24px;
@@ -1333,9 +1333,11 @@ select::-ms-expand {
         }
     }
 }
-.calendar-wrap{
+
+.calendar-wrap {
     position: relative;
 }
+
 .calendar {
     display: none;
     z-index: 5;
@@ -1348,26 +1350,30 @@ select::-ms-expand {
     border-radius: 16px;
     font-family: 'SF-Pro-Display', sans-serif;
 
-    &-top{
+    &-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 10px;
     }
-    &-month{
+
+    &-month {
         height: 32px;
         padding: 4px 12px;
         padding-right: 26px;
         background: #423166;
         border-radius: 6px;
-        &-name{
+
+        &-name {
             color: $white;
             font-size: 16px;
             line-height: 24px;
             font-weight: 600;
         }
+
         position: relative;
-        &::after{
+
+        &::after {
             background-image: url(../img/icons/month-chevron.svg);
             height: 12px;
             width: 7px;
@@ -1377,30 +1383,36 @@ select::-ms-expand {
             top: 10.6px;
         }
     }
-    &-nav{
+
+    &-nav {
         display: flex;
         align-items: center;
-        &-btn{
+
+        &-btn {
             background-image: url(../img/icons/chevron.svg);
             height: 17px;
             width: 10px;
             background-color: transparent;
             background-repeat: no-repeat;
             background-position: center;
-            &.prev{
+
+            &.prev {
                 margin-right: 31px;
             }
-            &.next{
+
+            &.next {
                 transform: rotate(-180deg);
             }
         }
     }
-    &-week{
+
+    &-week {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 10px;
-        &-day{
+
+        &-day {
             display: block;
             font-weight: 600;
             font-size: 13px;
@@ -1412,12 +1424,14 @@ select::-ms-expand {
             width: 36px;
         }
     }
-    &-days{
+
+    &-days {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        &-item{
+
+        &-item {
             text-align: center;
             height: 36px;
             width: 36px;
@@ -1429,48 +1443,57 @@ select::-ms-expand {
             line-height: 24px;
             color: $white;
             margin-bottom: 8px;
-            &.active{
+
+            &.active {
                 background: linear-gradient(90deg, #693CEE -36.17%, #A742C4 140.43%);
                 border-radius: 50%;
             }
         }
     }
-    &-actions{
+
+    &-actions {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10px 0 14px;
-        &-btn{
+
+        &-btn {
             background-color: transparent;
             color: $white;
             font-size: 16px;
             line-height: 24px;
         }
     }
-    &-dates{
+
+    &-dates {
         padding-bottom: 12px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
-.compatible-data{
-    &.purple{
-        .calendar{
+
+.compatible-data {
+    &.purple {
+        .calendar {
             background: #2C1E4A;
         }
     }
-    &.pink{
-        .calendar{
+
+    &.pink {
+        .calendar {
             background: #2D1346;
         }
     }
 }
-.show-sm{
+
+.show-sm {
     display: none;
 }
+
 input[type="time"]::-webkit-calendar-picker-indicator {
     background: none;
     text-align: -webkit-left;
 }
+
 /* Media Queries */
 @media screen and (max-width: 1900px) {
     .page-wrap {
@@ -1612,7 +1635,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     .input-birth-time {
         position: relative;
         margin-bottom: 16px;
-         .btn-choose-time {
+
+        .btn-choose-time {
             background-image: url(../img/icons/clock.svg);
             width: 24px;
             height: 24px;
@@ -1620,8 +1644,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
             right: 16px;
             content: '';
             position: absolute;
-             z-index: 4;
-             
+            z-index: 4;
+
             background-color: transparent;
         }
     }
@@ -1668,50 +1692,108 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     .header .blur-circle {
         z-index: -5;
     }
-    .header .container{
+
+    .header .container {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
     }
-     .start-test{
-         position: relative;
-         outline: 1px solid red;
-        
-         &-option{
-             position: absolute;
-             left: 0;
-             bottom: 8px;
-         }
-         .btn{
+
+    .start-test {
+        position: relative;
+        text-align: right;
+
+        &-option {
+            position: absolute;
+            left: 0;
+            bottom: 8px;
+        }
+
+        .btn {
             border-radius: 12px;
             font-weight: 600;
             font-size: 14px;
             line-height: 22px;
-            padding: 13px 25px;
-         }
+            padding: 0 18px;
+            display: block;
+            height: 38px;
+            margin-left: auto;
+        }
+
+        &-btn.btn {
+            display: block;
+            padding-right: 50px;
+            position: relative;
+
+            &::after {
+                background-image: url(../img/icons/arrow-down.svg);
+                content: '';
+                position: absolute;
+                top: 7px;
+                right: 10px;
+                width: 24px;
+                height: 24px;
+                background-position: center;
+                background-repeat: no-repeat;
+                transform: rotate(-180deg);
+            }
+            &.open{
+                &::after {
+                    transform: none;
+                }
+            }
+        }
+        .test-links{
+            display: none;
+            &.shown{
+                display: block;
+            }
+        }
+        .test-links{
+            padding-top: 8px;
+            position: absolute;
+            z-index: 5;
+            right: 0;
+            .btn:first-of-type{
+                margin-bottom: 8px;
+            }
+        }
+        .test-here, .start-test-btn{
+            min-width: 152px;
+        }
+        .test-app{
+            min-width: 193px;
+        }
     }
-    .result{
+
+    .result {
         padding-top: 22px;
     }
+
     .result-partner-wrap:first-of-type,
-    .result-partner-wrap:last-of-type{
+    .result-partner-wrap:last-of-type {
         border-radius: 24px;
     }
-    .result-partner-wrap{
+
+    .result-partner-wrap {
         display: none;
         width: 100%;
         box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.18);
-        &.active{
+
+        &.active {
             display: block;
         }
-        &.purple-theme{
+
+        &.purple-theme {
             background: #1A0C3D;
         }
     }
-    .tabs{
+
+    .tabs {
         display: block;
     }
-    .user-score{
+
+    .user-score {
         position: relative;
         left: inherit;
         top: inherit;
@@ -1721,18 +1803,59 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         width: 158px;
         min-width: 158px;
         height: 158px;
-        background: linear-gradient(90deg, rgba(105, 60, 238,0.2) -36.17%, rgba(167, 66, 196,0.2) 140.43%);
+        background: linear-gradient(90deg, rgba(105, 60, 238, 0.2) -36.17%, rgba(167, 66, 196, 0.2) 140.43%);
     }
-    .user-score-content{
+
+    .user-score-content {
         height: 139px;
         width: 139px;
     }
-    .user-score-points{
-        
+    .result-partner{
+        margin-bottom: 40px;
+    }
+    .user-score{
+        margin-bottom: 40px;
+    }
+    .user-score-points {
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: $white;
+    }
+    
+    .result .sub-heading{
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+    .user-score-number{
+        font-size: 32px;
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+    .user-score-name{
+        font-size: 22px;
+    }
+    .tabs-btn-wrap{
+        min-width: inherit;
+        width: 100%;
+    }
+    .tabs-btn{
+        height: 48px;
+        padding: 13px 18px;
+        border-radius: 12px;
+        font-size: 16px;
+        text-align: left;
+    }
+    .chart-data{
+        min-width: inherit;
+        width: 100%;
     }
 }
-@media screen and (max-width: 350px){
-    .calendar-days-item{
+
+@media screen and (max-width: 350px) {
+    .calendar-days-item {
         font-size: 14px;
         width: 30px;
         height: 30px;

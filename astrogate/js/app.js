@@ -67,6 +67,13 @@ $(document).ready(function () {
         $('.popup').hide();
     });
     
+    
+    /* Кнопка пройти тест */
+    
+     $('.start-test-btn').on("click", function () {
+        $('.test-links').toggleClass('shown');
+         $(this).toggleClass('open');
+    });
     /* Calendar */
     
     $('.select-birth-date').focus(function() {
