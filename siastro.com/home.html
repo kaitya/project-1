@@ -14,6 +14,7 @@
 </head>
 
 <body>
+   <div class="page-wrap">
     <header class="header">
         <div class="container">
             <div class="blur-circle"></div>
@@ -23,13 +24,15 @@
     <div class="main">
         <div class="container">
             <h1 class="heading">Совместимость по дате и месту рождения со <br /> своим настоящим, прошлым и будущим <br /> партнером</h1>
-            <p class="paragraph">Коэффициент не показывает личностные качества человека, он дает оценку Ваших шансов быть вместе. <br /> Программа не учитывает воспитание, окружение, факторы наследственности. И, прежде всего, в делах <br /> сердечных прислушивайтесь к своей интуиции, тогда у Вас все получится!</p>
+            <p class="paragraph hide-sm" id="main-description">Коэффициент не показывает личностные качества человека, он дает оценку Ваших шансов быть вместе. <br /> Программа не учитывает воспитание, окружение, факторы наследственности. И, прежде всего, в делах <br /> сердечных прислушивайтесь к своей интуиции, тогда у Вас все получится!</p>
+            <button class="btn btn-white show-sm" id="show-main-description">Читать подробнее</button>
+            
         </div>
     </div>
     <div class="compatible">
         <div class="container">
-           <div class="blur-circle"></div>
-            <h2 class="sub-heading">Расчет коэффициентов совместимости</h2>
+            <div class="blur-circle"></div>
+            <h2 class="sub-heading hide-sm">Расчет коэффициентов совместимости</h2>
             <div class="compatible-data-wrap">
                 <div class="compatible-data purple">
                     <span class="compatible-title">Ваши данные</span>
@@ -44,7 +47,7 @@
                         </div>
                         <div class="form-item">
                             <span class="form-item-title">Дата рождения</span>
-                            <div class="form-item-data">
+                            <div class="form-item-data hide-sm">
                                 <div class="select-wrap short">
                                     <select name="birth-day" id="birth-day" class="form-item-select">
                                         <option value="1">01</option>
@@ -67,23 +70,39 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="show-sm form-item-data">
+                                <div class="input-wrap input-birth-date">
+                                    <input type="text" value="01 января 1989" name="birth-date" class="form-item-input select-birth-date">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-item">
                             <span class="form-item-title">Время рождения</span>
-                            <div class="form-item-data">
+                            <div class="form-item-data hide-sm">
                                 <div class="select-wrap short birth-time">
-                                    <select name="birth-hour" class="form-item-select">
+                                    <select name="birth-hour" class="form-item-select  birth-time-select active">
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                     </select>
                                 </div>
                                 <div class="select-wrap short birth-time">
-                                    <select name="birth-minute" class="form-item-select">
+                                    <select name="birth-minute" class="form-item-select birth-time-select">
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                     </select>
+                                </div>
+                                <div class="form-item-checkbox">
+                                    <label class="form-checkbox">Неизвестно
+                                        <input type="checkbox" class="form-checkbox-input">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="show-sm form-item-data">
+                               <div class="input-wrap input-birth-time">
+                                    <input type="text" value="01 января 1989" name="birth-date" class="form-item-input select-birth-time">
                                 </div>
                                 <div class="form-item-checkbox">
                                     <label class="form-checkbox">Неизвестно
@@ -111,7 +130,6 @@
                                             </ul>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -127,7 +145,7 @@
                     </form>
                 </div>
                 <div class="compatible-data pink">
-                    <span class="compatible-title">Ваши данные</span>
+                    <span class="compatible-title">Данные партнера</span>
                     <form action="#" method="#" class="compatible-form">
                         <div class="compatible-gender">
                             <div class="gender-toggle man">
@@ -139,7 +157,7 @@
                         </div>
                         <div class="form-item">
                             <span class="form-item-title">Дата рождения</span>
-                            <div class="form-item-data">
+                            <div class="form-item-data hide-sm">
                                 <div class="select-wrap short">
                                     <select name="birth-day" id="birth-day" class="form-item-select">
                                         <option value="1">01</option>
@@ -162,23 +180,39 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="show-sm form-item-data">
+                                <div class="input-wrap input-birth-date">
+                                    <input type="text" value="01 января 1989" name="birth-date" class="form-item-input select-birth-date">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-item">
                             <span class="form-item-title">Время рождения</span>
-                            <div class="form-item-data">
+                            <div class="form-item-data hide-sm">
                                 <div class="select-wrap short birth-time">
-                                    <select name="birth-hour" class="form-item-select">
+                                    <select name="birth-hour" class="form-item-select  birth-time-select active">
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                     </select>
                                 </div>
                                 <div class="select-wrap short birth-time">
-                                    <select name="birth-minute"  class="form-item-select">
+                                    <select name="birth-minute" class="form-item-select birth-time-select">
                                         <option value="00">00</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
                                     </select>
+                                </div>
+                                <div class="form-item-checkbox">
+                                    <label class="form-checkbox">Неизвестно
+                                        <input type="checkbox" class="form-checkbox-input">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="show-sm form-item-data">
+                               <div class="input-wrap input-birth-time">
+                                    <input type="text" value="01 января 1989" name="birth-date" class="form-item-input select-birth-time">
                                 </div>
                                 <div class="form-item-checkbox">
                                     <label class="form-checkbox">Неизвестно
@@ -213,7 +247,7 @@
                             <span class="form-item-title">Ваше имя</span>
                             <div class="form-item-data">
                                 <div class="input-wrap">
-                                    <input type="text" value="" name="name" class="form-item-input" placeholder="Ваше имя">
+                                    <input type="text" value="Иван" name="name" class="form-item-input" placeholder="Ваше имя">
                                 </div>
                             </div>
                         </div>
@@ -251,6 +285,7 @@
             <a href="#" class="footer-link">Политика конфиденциальности</a>
         </div>
     </footer>
+    </div>
     <!-- Скрипты проекта -->
     <script src="js/app.min.js"></script>
 

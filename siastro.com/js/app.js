@@ -10,6 +10,12 @@ $(document).ready(function () {
         });
     });
 
+    $('#show-main-description').on("click", function () {
+        $('#main-description').toggle('slow');
+        $(this).text(function(i, text){
+          return text === "Читать подробнее" ? "Скрыть" : "Читать подробнее";
+      })
+    });
     /* Открытие выпадающего списка */
 
     $(".input-select-city").each(function () {
@@ -37,27 +43,32 @@ $(document).ready(function () {
         });
     });
 
-    /* Checkbox стили при checked */
-   
-    $(".form-checkbox-input").change(function () {
-        if (this.checked) {
-            $(this).parents().addClass('checked');
-            //$('select[name="birth-hour"]').attr('disabled','disabled');
-            //$('select[name="birth-minute"]').attr('disabled','disabled');
-            //$('.birth-time').addClass('disabled');
-            //$(this).parent().siblings().addClass('disabled');
-        } else {
-            $(this).parents().removeClass('checked');
-            //$('select[name="birth-hour"]').removeAttr('disabled');
-            //$('select[name="birth-minute"]').removeAttr('disabled');
-            //$('.birth-time').removeClass('disabled');
-            //$(this).parent().siblings().removeClass('disabled');
-        }
-    });
+    /* Checkbox */
+    
+    $(function () {
+        $(".form-checkbox-input").change(function () {
+            if ($(this).prop('checked') == true) {
+                
+                $(this).parents().find('.select-birth-time').attr('disabled','disabled');
+                $(this).parent().addClass('checked');
+                $(this).closest('.form-item').find('.birth-time-select').attr('disabled', 'disabled');
 
+            } else if ($(this).prop('checked') == false) {
+                 $(this).parents().find('.select-birth-time').removeAttr('disabled');
+                $(this).parent().removeClass('checked');
+                $(this).closest('.form-item').find('.birth-time-select').removeAttr('disabled');
+                $(this).closest('.form-item').find('.birth-time-select').removeAttr('disabled');
+            }
+        });
+    });
+    
+    /* Popup Window */
+    $('.popup-close').on("click", function () {
+        $('.popup').hide();
+    });
 });
 
-/* Слайдер */
+/* Слайдер страницы */
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -72,7 +83,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("chart-slider-item");
+    let slides = document.getElementsByClassName("slider-page");
 
     if (n > slides.length) {
         slideIndex = 1
@@ -86,3 +97,33 @@ function showSlides(n) {
 
     slides[slideIndex - 1].style.display = "block";
 }
+
+/* Слайдер popup 
+
+let slideIndex = 1;
+    displaySlides(slideIndex);
+
+function changeSlides(n) {
+    displaySlides(slideIndex += n);
+}
+
+function thisSlide(n) {
+    displaySlides(slideIndex = n);
+}
+
+function displaySlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slider-popup");
+
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}*/
