@@ -1,4 +1,21 @@
 $(document).ready(function () {
+    
+    /* Табы */
+    if(window.matchMedia('(@media screen and(min-width: 768px))').matches){
+        $(function () {
+            $(".tabs-btn-wrap").on("click", ".tabs-btn:not(.active)", function () {
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active")
+                    .closest("div.tabs")
+                    .find("div.tabs-content")
+                    .removeClass("active")
+                    .eq($(this).index())
+                    .addClass("active");
+            });
+        });
+    
 
     /* Переключение пола (муж/жен) */
 
@@ -31,22 +48,7 @@ $(document).ready(function () {
 
     
     
-    /* Табы */
-    if(window.matchMedia('(min-width: 768px)').matches){
-        $(function () {
-            $(".tabs-btn-wrap").on("click", ".tabs-btn:not(.active)", function () {
-                $(this)
-                    .addClass("active")
-                    .siblings()
-                    .removeClass("active")
-                    .closest("div.tabs")
-                    .find("div.tabs-content")
-                    .removeClass("active")
-                    .eq($(this).index())
-                    .addClass("active");
-            });
-        });
-    }
+    
     /* Checkbox */
     
     $(function () {
@@ -141,7 +143,7 @@ $(document).ready(function () {
         $('.chart-slider-item.popup_slider[level-data="l1"]').addClass('shown');
         
         if(window.matchMedia('(@media screen and (max-width: 768px))').matches){
-            $([document.documentElement, document.body]).animate({
+         $([document.documentElement, document.body]).animate({
         scrollTop: $(".chart-levels-items .level-info[level-data='l1']").offset().top
     }, 2000);
         }
