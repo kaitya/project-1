@@ -1,7 +1,8 @@
 $(document).ready(function () {
     
     /* Табы */
-    if(window.matchMedia('(@media screen and(min-width: 768px))').matches){
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            
         $(function () {
             $(".tabs-btn-wrap").on("click", ".tabs-btn:not(.active)", function () {
                 $(this)
@@ -16,7 +17,7 @@ $(document).ready(function () {
             });
         });
     
-
+        }
     /* Переключение пола (муж/жен) */
 
     $(".gender-toggle").each(function () {
@@ -45,8 +46,6 @@ $(document).ready(function () {
             $(this).siblings().removeClass('shown');
         });
     });
-
-    
     
     
     /* Checkbox */
@@ -95,37 +94,7 @@ $(document).ready(function () {
         $('.calendar').hide();
     });
     
-    if(window.matchMedia('(@media screen and (max-width: 768px))').matches){
-        
-        
-        
-        $(".tabs-btn").on("click", function () {
-            
-            if ($(this).hasClass('active')){
-                $(this).removeClass('active');
-                $(this).parent().removeClass('active');
-            }
-            else{
-                $(".tabs-btn, .tabs-content").removeClass('active');     
-                $(this).toggleClass('active');
-                $(this).parent().toggleClass('active');
-            }
-        });
-   
-         $(".chart-levels-items .btn-show-details").on("click", function () {
-             $(this).siblings('.level-info-text').toggle();
-             $(this).toggle();
-             $(this).siblings('.btn-recommend').toggle();
-        });
-        $('#partner1_tab').on("click", function () {
-            $('.result-partner-wrap').removeClass('active');
-             $('#partner1_result').addClass('active');
-        });
-         $('#partner2_tab').on("click", function () {
-             $('.result-partner-wrap').removeClass('active');
-             $('#partner2_result').addClass('active');
-        });
-    }
+    
     
     /* График */ 
     $('.chart-level[level-data="l1"]').on("click", function () {
@@ -356,13 +325,42 @@ $(document).ready(function () {
         scrollTop: $(".chart-levels-items .level-info[level-data='l12']").offset().top
     }, 2000);
     });
+
+
+if(window.matchMedia('(max-width: 768px)').matches){
+        
+        
+        
+        $(".tabs-btn").on("click", function () {
+            
+            if ($(this).hasClass('active')){
+                $(this).removeClass('active');
+                $(this).parent().removeClass('active');
+            }
+            else{
+                $(".tabs-btn, .tabs-content").removeClass('active');     
+                $(this).toggleClass('active');
+                $(this).parent().toggleClass('active');
+            }
+        });
+   
+         $(".chart-levels-items .btn-show-details").on("click", function () {
+             $(this).siblings('.level-info-text').toggle();
+             $(this).toggle();
+             $(this).siblings('.btn-recommend').toggle();
+        });
+        $('#partner1_tab').on("click", function () {
+            $('.result-partner-wrap').removeClass('active');
+             $('#partner1_result').addClass('active');
+        });
+         $('#partner2_tab').on("click", function () {
+             $('.result-partner-wrap').removeClass('active');
+             $('#partner2_result').addClass('active');
+        });
+    }
+/* Слайдеры */
     
 });
-
-
-
-/* Слайдеры */
-
 let slideIndex = [1,1];
 
 let slideId = ["popup_slider", "page_slider"]
