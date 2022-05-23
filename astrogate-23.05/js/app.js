@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     /* Табы */
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    if (window.matchMedia("(min -width: 768px)").matches) {
 
         $(function () {
             $(".tabs-btn-wrap").on("click", ".tabs-btn:not(.active)", function () {
