@@ -1,7 +1,40 @@
 $(document).ready(function () {
 
+    $(function () {
+        //$('.select-birth-date').datepicker();
+        //$('.select-birth-date').datepicker( $.datepicker.regional[ "ru" ] );
+        $.datepicker.setDefaults($.datepicker.regional["ru"]);
+        
+
+        //$( ".select-birth-date" ).datepicker();
+        $(".select-birth-date").datepicker({
+            showButtonPanel: true,
+            beforeShow: function (input) {
+                setTimeout(function () {
+                    var buttonPane = $(input)
+                        .datepicker("widget")
+                        .find(".ui-datepicker-buttonpane");
+
+                    var btn = $('Clear');
+                    btn
+                        .unbind("click")
+                        .bind("click", function () {
+                            $.datepicker._clearDate(input);
+                        });
+
+                    btn.appendTo(buttonPane);
+
+                }, 1);
+            }
+        });
+        
+        $.datepicker.formatDate( "dd-mm-yyyy", new Date( 1, 1, 1989 ) );
+
+    });
+
+    $('.currentText')
     /* Табы */
-    if (window.matchMedia("(min -width: 768px)").matches) {
+    if (window.matchMedia("(min-width: 768px)").matches) {
 
         $(function () {
             $(".tabs-btn-wrap").on("click", ".tabs-btn:not(.active)", function () {
@@ -84,7 +117,7 @@ $(document).ready(function () {
     });
     /* Calendar */
 
-    $('.select-birth-date').focus(function () {
+    /*$('.select-birth-date').focus(function () {
         $(this).next().show();
     });
     $('.select-birth-date').focusout(function () {
@@ -92,7 +125,7 @@ $(document).ready(function () {
     });
     $('.close-calendar').on("click", function () {
         $('.calendar').hide();
-    });
+    });*/
 
 
     /* График */

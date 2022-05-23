@@ -233,7 +233,7 @@ input[type='time'] {
 /* Стили блока Compatible (Совместимость) */
 
 .compatible {
-    .container{
+    .container {
         position: relative;
     }
 
@@ -901,6 +901,7 @@ select::-ms-expand {
         z-index: 5;
         top: -52px;
         transform: translateY(-50%);
+
         &-number {
             color: $white;
             font-weight: 600;
@@ -1170,8 +1171,9 @@ select::-ms-expand {
     cursor: pointer;
     background: linear-gradient(90deg, #693CEE -36.17%, #A742C4 140.43%);
     transition: 0.5s;
+
     .chart-level-points,
-    .chart-level-number{
+    .chart-level-number {
         color: $white;
         transition: 0.3s;
     }
@@ -1181,15 +1183,19 @@ select::-ms-expand {
     display: block;
     opacity: 1;
 }
+
 .page_slider.chart-slider-item {
     display: none;
-    &.shown{
+
+    &.shown {
         display: block;
     }
 }
-.chart-slider-item.popup_slider{
+
+.chart-slider-item.popup_slider {
     display: none;
-    &.shown{
+
+    &.shown {
         display: block;
     }
 }
@@ -1271,9 +1277,9 @@ select::-ms-expand {
     }
 
     &-content {
-       max-height: 100%;
+        max-height: 100%;
         overflow-y: scroll;
-        
+
     }
 
     &-close {
@@ -1486,6 +1492,119 @@ select::-ms-expand {
     }
 }
 
+.ui-datepicker-prev.ui-corner-all,
+.ui-datepicker-next.ui-corner-all {
+    background-image: url(../img/icons/chevron.svg);
+    height: 17px;
+    width: 10px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+}
+
+.ui-datepicker-prev.ui-corner-all {
+    margin-right: 31px;
+}
+
+.ui-datepicker-next.ui-corner-all {
+    transform: rotate(-180deg);
+}
+
+.ui-icon.ui-icon-circle-triangle-w,
+.ui-icon.ui-icon-circle-triangle-e {
+    display: none;
+}
+
+.ui-datepicker-title {
+    height: 32px;
+    padding: 4px 12px;
+    padding-right: 26px;
+    background: #423166;
+    border-radius: 6px;
+    position: relative;
+    display: inline-flex;
+
+    &::after {
+        background-image: url(../img/icons/month-chevron.svg);
+        height: 12px;
+        width: 7px;
+        content: '';
+        position: absolute;
+        right: 12px;
+        top: 10.6px;
+    }
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+    color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.ui-datepicker-calendar {
+    padding-top: 10px;
+}
+#ui-datepicker-div,
+.ui-datepicker.ui-widget.ui-widget-content {
+    border-radius: 16px;
+    font-family: 'SF-Pro-Display', sans-serif;
+    background-color: #2C1E4A;
+    max-width: 100% !important;
+    width: calc(90% - 32px) !important;
+    z-index: 20 !important;
+    padding: 8px 16px 0;
+    margin-top: 10px;
+    
+}
+.ui-datepicker-calendar tbody tr,
+.ui-datepicker-calendar thead tr{
+    text-align: center;
+    width: 100%;
+    
+}
+.ui-datepicker-calendar thead th span{
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.078px;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    width: 36px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.ui-datepicker-calendar tbody .ui-state-default{
+    text-align: center;
+    height: 36px;
+    width: 36px;
+    padding: 6px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $white;
+    padding: 6px;
+}
+.ui-state-hover,
+.ui-state-highlight.ui-state-active{
+    background: linear-gradient(90deg, #693CEE -36.17%, #A742C4 140.43%);
+    border-radius: 50%;
+}
+.ui-datepicker-calendar tbody tr{
+    padding: 10px 0;
+    height: 36px;
+}
+
+
+
+
 .compatible-data {
     &.purple {
         .calendar {
@@ -1509,11 +1628,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     text-align: -webkit-left;
 }
 
-.level-info.active{
+.level-info.active {
     position: relative;
     $border: 2px;
     background-clip: padding-box;
     border: $border solid transparent;
+
     &:before {
         content: '';
         position: absolute;
@@ -1527,8 +1647,30 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         background: linear-gradient(90deg, #693CEE -36.17%, #A742C4 140.43%);
     }
 }
+
 /* Media Queries */
 
+input::-webkit-date-and-time-value {
+    text-align: left!important;
+}
+.ui-datepicker-buttonpane{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+}
+.ui-datepicker-buttonpane button{
+    color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    border: none;
+    background: none;
+    background: transparent;
+}
 @media screen and (max-width: 1500px) {
 
     .result .container,
@@ -1555,12 +1697,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     .result .container {
         width: 100%;
     }
-    .page-wrap{
+
+    .page-wrap {
         padding-left: 24px;
         padding-right: 24px;
         width: 100%;
         overflow-x: hidden;
     }
+
     .compatible-data-wrap .compatible-data {
         margin-right: 0;
     }
@@ -1765,31 +1909,39 @@ input[type="time"]::-webkit-calendar-picker-indicator {
                 background-repeat: no-repeat;
                 transform: rotate(-180deg);
             }
-            &.open{
+
+            &.open {
                 &::after {
                     transform: none;
                 }
             }
         }
-        .test-links{
+
+        .test-links {
             display: none;
-            &.shown{
+
+            &.shown {
                 display: block;
             }
         }
-        .test-links{
+
+        .test-links {
             padding-top: 8px;
             position: absolute;
             z-index: 5;
             right: 0;
-            .btn:first-of-type{
+
+            .btn:first-of-type {
                 margin-bottom: 8px;
             }
         }
-        .test-here, .start-test-btn{
+
+        .test-here,
+        .start-test-btn {
             min-width: 152px;
         }
-        .test-app{
+
+        .test-app {
             min-width: 193px;
         }
     }
@@ -1799,21 +1951,24 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     }
 
     .result-partner-wrap.purple-theme,
-    .result-partner-wrap.pink-theme{
+    .result-partner-wrap.pink-theme {
         border-radius: 24px;
         border-top-left-radius: 0;
     }
-    .result-partner-wrap:last-of-type .partner-main-data{
+
+    .result-partner-wrap:last-of-type .partner-main-data {
         justify-content: flex-start;
     }
-    .partner-data-item{
+
+    .partner-data-item {
         text-align: left;
     }
+
     .result-partner-wrap {
         display: none;
         width: 100%;
         box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.18);
-    
+
         &.active {
             display: block;
         }
@@ -1821,7 +1976,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         &.purple-theme {
             background: #1A0C3D;
         }
-        &.pink-theme{
+
+        &.pink-theme {
             background: #250e3f;
         }
     }
@@ -1847,38 +2003,45 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         height: 139px;
         width: 139px;
     }
-    .result-partner{
+
+    .result-partner {
         margin-bottom: 40px;
     }
-    .user-score{
+
+    .user-score {
         margin-bottom: 40px;
     }
+
     .user-score-points {
         font-weight: 500;
         font-size: 18px;
         text-align: center;
         color: $white;
     }
-    
-    .result .sub-heading{
+
+    .result .sub-heading {
         font-size: 24px;
         line-height: 30px;
         text-align: left;
         margin-bottom: 24px;
     }
-    .user-score-number{
+
+    .user-score-number {
         font-size: 32px;
         line-height: 1;
         margin-bottom: 6px;
     }
-    .user-score-name{
+
+    .user-score-name {
         font-size: 22px;
     }
-    .tabs-btn-wrap{
+
+    .tabs-btn-wrap {
         min-width: inherit;
         width: 100%;
     }
-    .tabs-btn{
+
+    .tabs-btn {
         height: 48px;
         padding: 13px 18px;
         border-radius: 12px;
@@ -1886,46 +2049,59 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         text-align: left;
         justify-content: flex-start;
     }
-    .chart-data{
+
+    .chart-data {
         min-width: inherit;
         width: 100%;
     }
-    .tabs{
+
+    .tabs {
         margin-bottom: 24px;
     }
-    .result-score-info{
+
+    .result-score-info {
         padding: 16px;
     }
-    .result-score-info-text{
+
+    .result-score-info-text {
         font-size: 15px;
         overflow-wrap: break-word;
     }
+
     .chart-slider,
-    .chart-title{
+    .chart-title {
         display: none;
     }
-    .chart-slider.popup-slider{
+
+    .chart-slider.popup-slider {
         display: block;
     }
-    .chart-data{
+
+    .chart-data {
         margin-right: 0;
     }
-    .chart-levels-items{
+
+    .chart-levels-items {
         display: block;
-        .level-info{
+
+        .level-info {
             width: 100%;
-            &-text{
+
+            &-text {
                 display: none;
             }
         }
     }
-    .tabs-btn-wrap{
+
+    .tabs-btn-wrap {
         display: none;
     }
-    .tabs-btn{
+
+    .tabs-btn {
         margin-bottom: 16px;
         position: relative;
-        &::after{
+
+        &::after {
             content: '';
             position: absolute;
             height: 24px;
@@ -1937,108 +2113,139 @@ input[type="time"]::-webkit-calendar-picker-indicator {
             background-position: center;
             transform: rotate(-180deg);
         }
-        &.active{
-            &::after{
+
+        &.active {
+            &::after {
                 transform: none;
             }
         }
     }
-    .tabs-content{
+
+    .tabs-content {
         display: block;
-        &.active{
-             .tabs-btn{
-                 margin-bottom: 0px;
+
+        &.active {
+            .tabs-btn {
+                margin-bottom: 0px;
             }
-        .tabs-content-title,
-        .tabs-content-description{
-            display: block;
-        }
-        .tabs-content-title{
-            padding-top: 24px;
-        }
-        .tabs-content-description{
-            padding-bottom: 24px;
+
+            .tabs-content-title,
+            .tabs-content-description {
+                display: block;
+            }
+
+            .tabs-content-title {
+                padding-top: 24px;
+            }
+
+            .tabs-content-description {
+                padding-bottom: 24px;
+            }
         }
     }
-    }
+
     .tabs-content-title,
-    .tabs-content-description{
+    .tabs-content-description {
         display: none;
     }
-    .chart-level-number{
+
+    .chart-level-number {
         font-size: 13px;
     }
-    .chart-level-points{
+
+    .chart-level-points {
         font-size: 11px;
     }
-    .chart-level{
+
+    .chart-level {
         width: 19px;
         width: -webkit-fill-available;
         margin-right: 9px;
     }
-    .chart-lines{
+
+    .chart-lines {
         height: 127px;
     }
-    .chart-level{
+
+    .chart-level {
         border-radius: 4px;
-        &.l1{
+
+        &.l1 {
             height: 114px;
         }
-        &.l2{
+
+        &.l2 {
             height: 55px;
         }
-        &.l3{
+
+        &.l3 {
             height: 114px;
         }
-        &.l4{
+
+        &.l4 {
             height: 83px;
         }
-        &.l5{
+
+        &.l5 {
             height: 33px;
         }
-        &.l6{
+
+        &.l6 {
             height: 36px;
         }
-        &.l7{
+
+        &.l7 {
             height: 66px;
         }
-        &.l8{
+
+        &.l8 {
             height: 94px;
         }
-        &.l9{
+
+        &.l9 {
             height: 41px;
         }
-        &.l10{
+
+        &.l10 {
             height: 52px;
         }
-        &.l11{
+
+        &.l11 {
             height: 78px;
         }
-        &.l12{
+
+        &.l12 {
             height: 33px;
         }
     }
-    .chart{
+
+    .chart {
         padding: 40px 0;
     }
-    .chart-data{
+
+    .chart-data {
         height: 167px;
     }
-    .chart-levels{
+
+    .chart-levels {
         bottom: 26px;
     }
-    .action-btns{
+
+    .action-btns {
         display: none;
     }
-    .chart-levels-items .btn-recommend{
+
+    .chart-levels-items .btn-recommend {
         display: none;
     }
-    .result-partner-wrap{
+
+    .result-partner-wrap {
         padding-top: 28px;
         padding-bottom: 28px;
         padding-left: 18px;
     }
-    .result-partner-tab{
+
+    .result-partner-tab {
         width: 148px;
         padding: 10px 18px;
         box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.18);
@@ -2047,109 +2254,133 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
         overflow: hidden;
     }
-    .result-partner-tab:first-of-type{
+
+    .result-partner-tab:first-of-type {
         background-color: #1A0C3D;
     }
-    .result-partner-tab:nth-of-type(2){
+
+    .result-partner-tab:nth-of-type(2) {
         background-color: #250E3F;
     }
-    .result-partner{
+
+    .result-partner {
         display: block;
         border-bottom-left-radius: 24px;
         border-bottom-right-radius: 24px;
     }
-    .result-partners-tabs{
+
+    .result-partners-tabs {
         display: flex;
         align-items: stretch;
     }
-    .partner-zodiac{
+
+    .partner-zodiac {
         display: flex;
         align-items: center;
     }
-    .zodiac-icon{
+
+    .zodiac-icon {
         height: 16px;
         width: 16px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
         margin-right: 8px;
-        &.gemini{
+
+        &.gemini {
             background-image: url(../img/icons/gemini.svg);
         }
     }
-    .zodiac-text{
+
+    .zodiac-text {
         font-weight: 400;
         font-size: 12px;
         line-height: 18px;
         color: $white;
     }
-    .partner-name{
+
+    .partner-name {
         margin-bottom: 7px;
     }
-    .blur-circle{
+
+    .blur-circle {
         width: 314px;
         height: 314px;
         background: linear-gradient(90deg, #693CEE -36.17%, #A742C4 140.43%);
         opacity: 0.2;
         filter: blur(140px);
     }
-    .header{
-        .blur-circle{
+
+    .header {
+        .blur-circle {
             top: -63px;
             right: -96px;
         }
     }
-    body{
+
+    body {
         overflow-x: hidden;
     }
-    .footer .show-sm.btn-share{
+
+    .footer .show-sm.btn-share {
         width: 100%;
         border-radius: 12px;
         height: 48px;
         font-size: 16px;
     }
-    .footer-link{
+
+    .footer-link {
         margin-bottom: 48px;
     }
-    .chart{
+
+    .chart {
         padding-bottom: 0;
     }
-    .chart-levels-items .level-info:last-of-type{
+
+    .chart-levels-items .level-info:last-of-type {
         margin-bottom: 0;
     }
-    .chart-levels-items{
+
+    .chart-levels-items {
         margin-bottom: 75px;
     }
-    .compatible .blur-circle{
+
+    .compatible .blur-circle {
         z-index: -5;
     }
-    .popup-wrap{
+
+    .popup-wrap {
         width: calc(100% - 48px);
         height: auto;
     }
-    .level-info-number-wrap{
+
+    .level-info-number-wrap {
         height: 58px;
         width: 58px;
     }
-    .level-info-number{
+
+    .level-info-number {
         height: 54px;
         width: 54px;
         font-size: 18px;
     }
-    .popup-slider .level-info-number-wrap{
+
+    .popup-slider .level-info-number-wrap {
         margin-right: 16px;
     }
-    .popup-wrap{
+
+    .popup-wrap {
         padding: 20px 24px;
     }
-    .popup-close{
+
+    .popup-close {
         right: 0px;
         top: -10px;
         transform: none;
         transform: translateY(-100%);
     }
 
-    .popup-wrap{
+    .popup-wrap {
         transform: none;
         top: inherit;
         left: 50%;
@@ -2157,36 +2388,45 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         max-height: calc(100vh - 200px);
         top: 100px;
     }
-    .popup-content{
+
+    .popup-content {
         max-height: calc(100vh - 250px);
     }
 }
 
 @media screen and (max-width: 400px) {
-    .chart-level{
+    .chart-level {
         width: 19px;
         margin-right: 0;
     }
 }
+
 @media screen and (max-width: 350px) {
     .calendar-days-item {
         font-size: 14px;
         width: 30px;
         height: 30px;
     }
-    .start-test .start-test-btn, .start-test .test-here{
+
+    .start-test .start-test-btn,
+    .start-test .test-here {
         min-width: inherit;
     }
-    .start-test .btn{
+
+    .start-test .btn {
         font-size: 12px;
     }
-    .header-logo{
+
+    .header-logo {
         font-size: 18px;
     }
-    .partner-data-type,.partner-data-personal{
+
+    .partner-data-type,
+    .partner-data-personal {
         font-size: 13px;
     }
-    .result .sub-heading{
+
+    .result .sub-heading {
         font-size: 22px;
     }
 }

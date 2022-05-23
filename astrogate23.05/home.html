@@ -6,11 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SiAstro.com</title>
-    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/x-icon" href="#">
 
     <!-- Стили проекта -->
     <link rel="stylesheet" href="css/app.min.css">
-
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="js/ru.js"></script>
 </head>
 
 <body>
@@ -74,77 +77,6 @@
                                 <div class="input-wrap input-birth-date">
                                    <button class="btn btn-open-calendar"></button>
                                     <input type="text" value="01 января 1989" name="birth-date" class="form-item-input select-birth-date">
-                                    <div class="calendar hide-lg">
-                                   <div class="calendar-top">
-                                        <div class="calendar-month">
-                                            <span class="calendar-month-name">Январь <span class="calendar-year">2021</span></span>
-                                        </div>
-                                        <div class="calendar-nav">
-                                            <button class="btn calendar-nav-btn prev"></button>
-                                            <button class="btn calendar-nav-btn next"></button>
-                                        </div>
-                                    </div>
-                                    <div class="calendar-dates">
-                                        <div class="calendar-week">
-                                            <span class="calendar-week-day">пн</span>
-                                            <span class="calendar-week-day">вт</span>
-                                            <span class="calendar-week-day">ср</span>
-                                            <span class="calendar-week-day">чт</span>
-                                            <span class="calendar-week-day">пт</span>
-                                            <span class="calendar-week-day">сб</span>
-                                            <span class="calendar-week-day">вс</span>
-                                        </div>
-                                        <div class="calendar-days week-1">
-                                            <span class="calendar-days-item"></span>
-                                            <span class="calendar-days-item active">1</span>
-                                            <span class="calendar-days-item">2</span>
-                                            <span class="calendar-days-item">3</span>
-                                            <span class="calendar-days-item">4</span>
-                                            <span class="calendar-days-item">5</span>
-                                            <span class="calendar-days-item">6</span>
-                                        </div>
-                                        <div class="calendar-days week-2">
-                                            <span class="calendar-days-item">7</span>
-                                            <span class="calendar-days-item">8</span>
-                                            <span class="calendar-days-item">9</span>
-                                            <span class="calendar-days-item">10</span>
-                                            <span class="calendar-days-item">11</span>
-                                            <span class="calendar-days-item">12</span>
-                                            <span class="calendar-days-item">13</span>
-                                        </div>
-                                        <div class="calendar-days week-3">
-                                            <span class="calendar-days-item">14</span>
-                                            <span class="calendar-days-item">15</span>
-                                            <span class="calendar-days-item">16</span>
-                                            <span class="calendar-days-item">17</span>
-                                            <span class="calendar-days-item">18</span>
-                                            <span class="calendar-days-item">19</span>
-                                            <span class="calendar-days-item">20</span>
-                                        </div>
-                                        <div class="calendar-days week-4">
-                                            <span class="calendar-days-item">21</span>
-                                            <span class="calendar-days-item">22</span>
-                                            <span class="calendar-days-item">23</span>
-                                            <span class="calendar-days-item">24</span>
-                                            <span class="calendar-days-item">25</span>
-                                            <span class="calendar-days-item">26</span>
-                                            <span class="calendar-days-item">27</span>
-                                        </div>
-                                        <div class="calendar-days week-5">
-                                            <span class="calendar-days-item">28</span>
-                                            <span class="calendar-days-item">29</span>
-                                            <span class="calendar-days-item">30</span>
-                                            <span class="calendar-days-item">31</span>
-                                            <span class="calendar-days-item"></span>
-                                            <span class="calendar-days-item"></span>
-                                            <span class="calendar-days-item"></span>
-                                        </div>
-                                    </div>
-                                    <div class="calendar-actions">
-                                        <button class="calendar-actions-btn">Сбросить</button>
-                                        <button class="calendar-actions-btn close-calendar">Готово</button>
-                                    </div>
-                                </div>
                                 </div>
                                 
                             </div>
@@ -211,7 +143,7 @@
                             <span class="form-item-title">Ваше имя</span>
                             <div class="form-item-data">
                                 <div class="input-wrap">
-                                    <input type="text" value="Иван" name="name" class="form-item-input" placeholder="Ваше имя">
+                                    <input type="text" value="" name="name" class="form-item-input" placeholder="Ваше имя">
                                 </div>
                             </div>
                         </div>
@@ -236,21 +168,21 @@
                                     <select name="birth-day" id="birth-day" class="form-item-select">
                                         <option value="1">01</option>
                                         <option value="2">02</option>
-                                        <option value="3">03</option>
+                                        <option value="3" selected>03</option>
                                     </select>
                                 </div>
                                 <div class="select-wrap">
                                     <select name="birth-month" id="birth-month" class="form-item-select">
                                         <option value="1">Января</option>
                                         <option value="2">Февраля</option>
-                                        <option value="3">Марта</option>
+                                        <option value="3" selected>Марта</option>
                                     </select>
                                 </div>
                                 <div class="select-wrap short">
                                     <select name="birth-year" id="birth-year" class="form-item-select">
-                                        <option value="1988">1988</option>
-                                        <option value="1989">1989</option>
-                                        <option value="1990">1990</option>
+                                        <option value="1988">1990</option>
+                                        <option value="1989">1991</option>
+                                        <option value="1990">1992</option>
                                     </select>
                                 </div>
                             </div>
@@ -258,77 +190,7 @@
                                 <div class="input-wrap input-birth-date">
                                     <button class="btn btn-open-calendar"></button>
                                     <input type="text" value="01 января 1989" name="birth-date" class="form-item-input select-birth-date">
-                                    <div class="calendar hide-lg">
-                                   <div class="calendar-top">
-                                        <div class="calendar-month">
-                                            <span class="calendar-month-name">Январь <span class="calendar-year">2021</span></span>
-                                        </div>
-                                        <div class="calendar-nav">
-                                            <button class="btn calendar-nav-btn prev"></button>
-                                            <button class="btn calendar-nav-btn next"></button>
-                                        </div>
-                                    </div>
-                                    <div class="calendar-dates">
-                                        <div class="calendar-week">
-                                            <span class="calendar-week-day">пн</span>
-                                            <span class="calendar-week-day">вт</span>
-                                            <span class="calendar-week-day">ср</span>
-                                            <span class="calendar-week-day">чт</span>
-                                            <span class="calendar-week-day">пт</span>
-                                            <span class="calendar-week-day">сб</span>
-                                            <span class="calendar-week-day">вс</span>
-                                        </div>
-                                        <div class="calendar-days week-1">
-                                            <span class="calendar-days-item"></span>
-                                            <span class="calendar-days-item active">1</span>
-                                            <span class="calendar-days-item">2</span>
-                                            <span class="calendar-days-item">3</span>
-                                            <span class="calendar-days-item">4</span>
-                                            <span class="calendar-days-item">5</span>
-                                            <span class="calendar-days-item">6</span>
-                                        </div>
-                                        <div class="calendar-days week-2">
-                                            <span class="calendar-days-item">7</span>
-                                            <span class="calendar-days-item">8</span>
-                                            <span class="calendar-days-item">9</span>
-                                            <span class="calendar-days-item">10</span>
-                                            <span class="calendar-days-item">11</span>
-                                            <span class="calendar-days-item">12</span>
-                                            <span class="calendar-days-item">13</span>
-                                        </div>
-                                        <div class="calendar-days week-3">
-                                            <span class="calendar-days-item">14</span>
-                                            <span class="calendar-days-item">15</span>
-                                            <span class="calendar-days-item">16</span>
-                                            <span class="calendar-days-item">17</span>
-                                            <span class="calendar-days-item">18</span>
-                                            <span class="calendar-days-item">19</span>
-                                            <span class="calendar-days-item">20</span>
-                                        </div>
-                                        <div class="calendar-days week-4">
-                                            <span class="calendar-days-item">21</span>
-                                            <span class="calendar-days-item">22</span>
-                                            <span class="calendar-days-item">23</span>
-                                            <span class="calendar-days-item">24</span>
-                                            <span class="calendar-days-item">25</span>
-                                            <span class="calendar-days-item">26</span>
-                                            <span class="calendar-days-item">27</span>
-                                        </div>
-                                        <div class="calendar-days week-5">
-                                            <span class="calendar-days-item">28</span>
-                                            <span class="calendar-days-item">29</span>
-                                            <span class="calendar-days-item">30</span>
-                                            <span class="calendar-days-item">31</span>
-                                            <span class="calendar-days-item"></span>
-                                            <span class="calendar-days-item"></span>
-                                            <span class="calendar-days-item"></span>
-                                        </div>
-                                    </div>
-                                    <div class="calendar-actions">
-                                        <button class="calendar-actions-btn">Сбросить</button>
-                                        <button class="calendar-actions-btn close-calendar">Готово</button>
-                                    </div>
-                                </div>
+                                    
                                 </div>
                                  
                             </div>
@@ -395,7 +257,7 @@
                             <span class="form-item-title">Ваше имя</span>
                             <div class="form-item-data">
                                 <div class="input-wrap">
-                                    <input type="text" value="Иван" name="name" class="form-item-input" placeholder="Ваше имя">
+                                    <input type="text" value="" name="name" class="form-item-input" placeholder="Ваше имя">
                                 </div>
                             </div>
                         </div>
@@ -434,9 +296,10 @@
         </div>
     </footer>
     </div>
-    <!-- Скрипты проекта -->
-    <script src="js/app.min.js"></script>
-
+    
+    <!-- Скрипты проекта-->
+    
+    <script src="js/app.js"></script>
 </body>
 
 </html>
